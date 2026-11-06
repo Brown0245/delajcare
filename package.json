@@ -1,0 +1,13 @@
+{
+  "name": "delajcare",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for Dela J Care Solutions (Cloudflare Workers + static assets)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}

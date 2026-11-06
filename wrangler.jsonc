@@ -1,0 +1,37 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "delajcare",
+  "main": "./src/index.js",
+  "compatibility_date": "2026-11-06",
+  "observability": { "enabled": true },
+
+  // Static site files
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": ["/api/*"]
+  },
+
+  // Custom domain: the site answers on delajcare.ca and www.delajcare.ca
+  "routes": [
+    { "pattern": "delajcare.ca", "custom_domain": true },
+    { "pattern": "www.delajcare.ca", "custom_domain": true }
+  ],
+
+  // Cloudflare Email Service binding used by the contact form
+  "send_email": [
+    { "name": "EMAIL" }
+  ],
+
+  "vars": {
+    // Sender address on your own domain.
+    "FROM_EMAIL": "website@delajcare.ca"
+  }
+
+  // Private settings (kept out of this public repo). Set once with:
+  //   npx wrangler secret put TO_EMAIL         -> inbox for enquiries (a verified Email Routing destination)
+  //   npx wrangler secret put CAREERS_EMAIL    -> optional, inbox for job applications
+  //   npx wrangler secret put TURNSTILE_SECRET -> optional spam protection (also set the site key in the HTML)
+}
