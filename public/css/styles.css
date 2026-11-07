@@ -270,6 +270,12 @@ button, input, select, textarea { font: inherit; }
 .standard h3 { font-family: var(--font-head); font-weight: 800; font-size: 22px; margin-bottom: 8px; }
 .standard p { color: var(--cream-text); }
 
+/* ---------- About: mission & vision ---------- */
+.purpose { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px 56px; }
+.purpose__item { border-top: 3px solid var(--blue); padding-top: 28px; }
+.purpose__label { font-family: var(--font-head); font-weight: 800; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber); margin-bottom: 14px; }
+.purpose__text { font-family: var(--font-serif); font-size: clamp(22px, 2.2vw, 27px); line-height: 1.4; color: var(--ink); }
+
 /* ---------- Tiles ---------- */
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
 .tile { background: var(--sand); padding: 28px; }
