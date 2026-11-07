@@ -388,3 +388,5 @@ button, input, select, textarea { font: inherit; }
   .contact-list div { flex-direction: column; gap: 2px; }
   .contact-list dd { text-align: left; }
 }
+
+.footer__phones a { color: var(--gold-light); font-weight: 600; }
