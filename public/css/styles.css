@@ -287,6 +287,9 @@ button, input, select, textarea { font: inherit; }
 .careers > div { flex: 999 1 480px; max-width: 760px; }
 
 /* ---------- Careers page ---------- */
+.team-photo { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; display: block; margin-bottom: 32px; }
+.role__img { width: calc(100% + 72px); max-width: none; margin: -36px -36px 6px; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+@media (max-width: 720px) { .team-photo { aspect-ratio: 4 / 3; } }
 .roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 .role { background: var(--sand); padding: 36px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
 .role__tag { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; color: var(--white); background: var(--amber); padding: 6px 12px; border-radius: 999px; }
