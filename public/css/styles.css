@@ -180,11 +180,10 @@ button, input, select, textarea { font: inherit; }
 .hero__inner { display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-end; padding-top: clamp(40px, 6vw, 72px); }
 .hero__copy { flex: 999 1 440px; min-width: 0; padding-block: clamp(8px, 4vw, 48px) 64px; }
 .hero__lead { font-size: 20px; line-height: 1.55; color: #3A4560; margin-top: 22px; max-width: 520px; }
-.hero__collage { flex: 1 1 460px; min-width: 0; position: relative; aspect-ratio: 1 / 1.05; max-height: 600px; margin-bottom: 0; z-index: 2; }
+.hero__collage { flex: 1 1 460px; min-width: 0; position: relative; aspect-ratio: 1 / 1.05; max-height: 600px; margin-bottom: -160px; z-index: 2; }
 .hero__back { position: absolute; right: 0; top: 0; width: 62%; height: 100%; object-fit: cover; }
 .hero__front { position: absolute; left: 0; top: 9%; width: 72%; height: 70%; object-fit: cover; box-shadow: 0 24px 48px rgba(20, 33, 61, .18); }
-.hero { padding-bottom: clamp(48px, 7vw, 96px); border-bottom: 1px solid var(--line); }
-.band--after-hero { padding-top: var(--section-y); }
+.band--after-hero { padding-top: calc(160px + var(--section-y) * 0.6); }
 
 /* ---------- Glance strip + video ---------- */
 .glance { text-align: center; margin-bottom: 72px; }
@@ -377,7 +376,8 @@ button, input, select, textarea { font: inherit; }
 /* ---------- Small screens ---------- */
 @media (max-width: 720px) {
   body { font-size: 16px; }
-  .band--after-hero { padding-top: var(--section-y); }
+  .hero__collage { margin-bottom: -110px; }
+  .band--after-hero { padding-top: 170px; }
   .glance { margin-bottom: 48px; }
   .audience__card { padding: 28px; }
   .audience__title { font-size: 24px; }
