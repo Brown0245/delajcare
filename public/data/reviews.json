@@ -1,0 +1,5 @@
+{
+  "_how_to_add": "Add real reviews only, with the person's permission. Copy the example object into the reviews list. rating is 1-5. relation and location are optional. Leave reviews as [] to show the 'share your experience' message instead.",
+  "_example": { "name": "Mary T.", "relation": "Daughter of a client", "location": "Burlington", "rating": 5, "text": "Their words, exactly as they gave them.", "date": "2026-11" },
+  "reviews": []
+}

@@ -16,7 +16,7 @@
 
 const PHONE = '(647) 575-5277';
 
-const TOPICS = ['Care for a family member', 'Care for myself', 'Staffing for a facility', 'Joining the Dela J team', 'Something else'];
+const TOPICS = ['Care for a family member', 'Care for myself', 'Staffing for a facility', 'Joining the Dela J team', 'Share a review', 'Something else'];
 const ROLES = ['Personal Support Worker (PSW)', 'Registered Practical Nurse (RPN)', 'Registered Nurse (RN)', 'Other'];
 const EXPERIENCE = ['New graduate', 'Less than 1 year', '1–3 years', '3–5 years', '5+ years'];
 const AVAILABILITY = ['Weekdays', 'Evenings', 'Nights', 'Weekends'];

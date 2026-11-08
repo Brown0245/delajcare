@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
-  <link rel="stylesheet" href="/css/styles.css?v=8">
+  <link rel="stylesheet" href="/css/styles.css?v=9">
 
   <script type="application/ld+json">
   {
@@ -342,6 +342,31 @@
       </div>
     </section>
 
+    <!-- ===== Reviews ===== -->
+    <section id="reviews" class="section section--sand">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Reviews</p>
+            <h2 class="h2">In their words.</h2>
+          </div>
+          <p class="muted" style="max-width:420px;margin:0">What clients and families say about the care they get from Dela J.</p>
+        </div>
+        <div class="reviews" id="reviews-list" aria-live="polite"></div>
+        <div class="reviews-cta">
+          <span class="reviews-cta__mark" aria-hidden="true">&ldquo;</span>
+          <div class="reviews-cta__body">
+            <p class="reviews-cta__title" id="reviews-cta-title">Had care from Dela J? Tell us how we did.</p>
+            <p class="muted">Your feedback helps other families choose with confidence, and it helps our team get better. With your permission, we may share it here.</p>
+          </div>
+          <div class="reviews-cta__actions">
+            <a href="#contact" class="btn btn--amber" data-topic="Share a review">Share your experience</a>
+            <a href="tel:+16475755277" class="btn btn--outline">Call (647) 575-5277</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== Service areas ===== -->
     <section id="areas" class="section section--rule">
       <div class="container">
@@ -441,6 +466,7 @@
                 <option>Care for myself</option>
                 <option>Staffing for a facility</option>
                 <option>Joining the Dela J team</option>
+                <option>Share a review</option>
                 <option>Something else</option>
               </select>
             </label>
@@ -516,5 +542,6 @@
   <script src="/js/main.js?v=7" defer></script>
   <script src="/vendor/leaflet/leaflet.js" defer></script>
   <script src="/js/areas-map.js?v=3" defer></script>
+  <script src="/js/reviews.js?v=1" defer></script>
 </body>
 </html>
