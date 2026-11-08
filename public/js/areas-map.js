@@ -18,6 +18,7 @@
 
   var map = L.map(el, {
     scrollWheelZoom: false,
+    zoomSnap: 0.25,
     zoomControl: true,
     attributionControl: true
   }).setView([43.4, -79.5], 8);
