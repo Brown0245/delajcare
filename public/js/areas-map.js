@@ -20,7 +20,7 @@
     scrollWheelZoom: false,
     zoomControl: true,
     attributionControl: true
-  });
+  }).setView([43.4, -79.5], 8);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 15,
@@ -29,6 +29,7 @@
   }).addTo(map);
 
   var layers = {};
+  var bounds = {};
   var all = L.featureGroup().addTo(map);
 
   Object.keys(AREAS).forEach(function (key) {
@@ -46,9 +47,12 @@
     circle.on('click', function () { select(key, false); });
     circle.addTo(all);
     layers[key] = circle;
+    bounds[key] = L.latLng(a.ll).toBounds(a.r * 2);
   });
 
-  var fitAll = function () { map.fitBounds(all.getBounds(), { padding: [20, 20] }); };
+  var allBounds = L.latLngBounds([]);
+  Object.keys(bounds).forEach(function (k) { allBounds.extend(bounds[k]); });
+  var fitAll = function () { map.fitBounds(allBounds, { padding: [20, 20] }); };
   fitAll();
 
   var buttons = document.querySelectorAll('.area-btn');
@@ -66,7 +70,7 @@
     buttons.forEach(function (b) { b.classList.toggle('is-on', b.getAttribute('data-area') === key); });
     if (key === 'all') { map.closePopup(); fitAll(); return; }
     if (fly) {
-      map.flyToBounds(layers[key].getBounds(), { padding: [30, 30], duration: 0.8 });
+      map.flyToBounds(bounds[key], { padding: [30, 30], duration: 0.8 });
       layers[key].openPopup();
     }
   }
