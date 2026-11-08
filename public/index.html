@@ -22,7 +22,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&amp;family=Inter:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/styles.css?v=7">
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/css/styles.css?v=8">
 
   <script type="application/ld+json">
   {
@@ -341,6 +342,36 @@
       </div>
     </section>
 
+    <!-- ===== Service areas ===== -->
+    <section id="areas" class="section section--rule">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker">Where we care</p>
+            <h2 class="h2">From the GTA to Niagara.</h2>
+          </div>
+          <p class="muted" style="max-width:420px;margin:0">Our PSWs and nurses visit clients at home and staff facilities across these regions. Not sure if you're covered? Call us and we'll tell you right away.</p>
+        </div>
+        <div class="areas">
+          <ul class="areas__list" aria-label="Service areas">
+            <li><button type="button" class="area-btn" data-area="gta">Greater Toronto Area</button></li>
+            <li><button type="button" class="area-btn" data-area="york">York Region</button></li>
+            <li><button type="button" class="area-btn" data-area="durham">Durham Region</button></li>
+            <li><button type="button" class="area-btn" data-area="halton">Halton Region</button></li>
+            <li><button type="button" class="area-btn" data-area="burlington">Burlington</button></li>
+            <li><button type="button" class="area-btn" data-area="hamilton">Hamilton</button></li>
+            <li><button type="button" class="area-btn" data-area="haldimand">Haldimand County</button></li>
+            <li><button type="button" class="area-btn" data-area="niagara">Niagara Region</button></li>
+            <li class="areas__all"><button type="button" class="area-btn area-btn--all" data-area="all">Show all areas</button></li>
+          </ul>
+          <div class="areas__map-wrap">
+            <div id="areas-map" class="areas__map" role="region" aria-label="Map of Dela J Care service areas"></div>
+            <noscript><p class="muted">Map needs JavaScript. We serve the GTA, York, Durham, Halton, Burlington, Hamilton, Haldimand and Niagara.</p></noscript>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== FAQ ===== -->
     <section id="faq" class="section section--sand">
       <div class="container split">
@@ -466,7 +497,7 @@
             <a href="/privacy">Privacy</a>
           </div>
           <div>
-            <p class="footer__head">We serve</p>
+            <p class="footer__head"><a href="#areas">We serve</a></p>
             <p>Greater Toronto Area</p>
             <p>York Region · Durham Region</p>
             <p>Halton Region · Burlington</p>
@@ -483,5 +514,7 @@
   </footer>
 
   <script src="/js/main.js?v=7" defer></script>
+  <script src="/vendor/leaflet/leaflet.js" defer></script>
+  <script src="/js/areas-map.js?v=1" defer></script>
 </body>
 </html>

@@ -393,3 +393,28 @@ button, input, select, textarea { font: inherit; }
 }
 
 .footer__phones a { color: var(--gold-light); font-weight: 600; }
+
+/* ===== Service area map ===== */
+.areas { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: 32px; align-items: stretch; }
+.areas__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.area-btn { width: 100%; text-align: left; min-height: 48px; padding: 12px 18px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--white); color: var(--ink); font: 600 16px/1.3 var(--font-body); cursor: pointer; transition: border-color .15s, background .15s, color .15s; }
+.area-btn:hover { border-color: var(--blue); color: var(--blue); }
+.area-btn.is-on { background: var(--amber); border-color: var(--amber); color: var(--white); }
+.area-btn--all { background: transparent; border-style: dashed; color: var(--blue); }
+.areas__all { margin-top: 4px; }
+.areas__map-wrap { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(20,33,61,.10); }
+.areas__map { height: 100%; min-height: 520px; background: var(--sand); }
+.areas__map .leaflet-tile-pane { filter: grayscale(.85) sepia(.15) brightness(1.04); }
+.area-label { background: transparent; border: 0; box-shadow: none; color: var(--navy); font: 700 12px/1.2 var(--font-body); text-align: center; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; padding: 0; }
+.area-label::before { display: none; }
+.leaflet-popup-content { font: 14px/1.45 var(--font-body); color: var(--ink); }
+.leaflet-popup-content strong { color: var(--navy); font-size: 15px; }
+.area-popup__link { display: inline-block; margin-top: 6px; color: var(--amber) !important; font-weight: 700; }
+.footer__head a { color: inherit; text-decoration: none; }
+@media (max-width: 860px) {
+  .areas { grid-template-columns: 1fr; }
+  .areas__list { flex-direction: row; flex-wrap: wrap; }
+  .areas__list li { flex: 1 1 calc(50% - 8px); }
+  .areas__all { margin-top: 0; flex-basis: 100% !important; }
+  .areas__map { min-height: 380px; }
+}
