@@ -14,7 +14,7 @@
  *   TURNSTILE_SECRET – enables Cloudflare Turnstile spam checks
  */
 
-const PHONE = '(647) 575-5277';
+const PHONE = '(647) 575-5277 or (905) 519-5029';
 
 const TOPICS = ['Care for a family member', 'Care for myself', 'Staffing for a facility', 'Joining the Dela J team', 'Share a review', 'Something else'];
 const ROLES = ['Personal Support Worker (PSW)', 'Registered Practical Nurse (RPN)', 'Registered Nurse (RN)', 'Other'];
